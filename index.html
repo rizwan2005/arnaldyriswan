@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>My Portofolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/5e69ee8730.js" crossorigin="anonymous"></script>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/Rzwn__2_-removebg-preview.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hi, I'm <span>Rizwan</span> <br>From Indonesia</h1>
+                </div>
+            </div>
+        </div>
+        <!--About-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/WhatsApp_Image_2023-08-21_at_07.15.34-removebg-preview (1).png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skill</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('project')">Project</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('contact')">Contact</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>App Devolopment</span><br>Building Android apps</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 - 2022</span><br>Magang Digital Marketing<br>P.T Jaya Bersama Saputra</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="project">
+                            <ul>
+                                <li><span>Project App (Make Web)</span><br>In Progress</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2017 - 2020</span><br>SMP Islam Al-Abidin<br>Jl. Tarumanegara No.3, Banyuanyar, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57137</li>
+                                <li><span>2020 - 2023</span><br>SMK Negeri 2 Surakarta<br>Jurusan Rekayasa Perangkat Lunak<br>Jl. Tarumanegara No.3, Banyuanyar, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57137</li>
+                                <li><span>2023 - </span><br>Universitas Sebelas Maret<br>D3 Teknik Informatika</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="contact">
+                            <ul>
+                                <li><span>Whatsapp</span><br>081226306183</li>
+                                <li><span>Instagram</span><br>a_rizpl</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--Service-->    
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Programming Language Skill</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Android Studio</h2>
+                    <p>Andoid Studio</p>
+                    <a href="#">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-php"></i>
+                    <h2>PHP</h2>
+                    <p>PHP</p>
+                    <a href="#">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>MySQL</h2>
+                    <p>MySQL</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+    
+    <!--Portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <div class="work">
+                        <img src="images/My Portfolio/WhatsApp Image 2023-10-02 at 01.26.40.jpeg" alt="">
+                    </div>
+                    <div class="work">
+                        <img src="images/My Portfolio/WhatsApp Image 2023-10-02 at 01.26.39.jpeg" alt="">
+                    </div>
+                    <div class="work-app">
+                        <img src="images/My Portfolio/WhatsApp Image 2023-10-02 at 01.23.50.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>    
+    </body>
+</html>
